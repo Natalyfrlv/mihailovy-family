@@ -1,0 +1,130 @@
+.dresscode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: clamp(18px, 5vw, 32px);
+  margin: 24px auto;
+  max-width: 520px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: cardIn 0.7s ease both;
+}
+
+.dresscode h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.dresscode p {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+  max-width: 420px;
+}
+
+/* Кружки цветов */
+.dresscode .colors {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dresscode .color-circle {
+  width: clamp(40px, 8vw, 60px);
+  height: clamp(40px, 8vw, 60px);
+  border-radius: 50%;
+  border: 2px solid rgba(101, 69, 40, 0.2);
+  animation: colorPop 0.6s ease both;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dresscode .color-circle:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 14px 24px rgba(101, 69, 40, 0.16),
+    inset 0 0 0 4px rgba(255, 255, 255, 0.45);
+}
+
+.dresscode .color-circle:nth-child(1) { animation-delay: 0.05s; }
+.dresscode .color-circle:nth-child(2) { animation-delay: 0.1s; }
+.dresscode .color-circle:nth-child(3) { animation-delay: 0.15s; }
+.dresscode .color-circle:nth-child(4) { animation-delay: 0.2s; }
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes colorPop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dresscode,
+  .dresscode .color-circle {
+    animation: none;
+  }
+
+  .dresscode .color-circle {
+    transition: none;
+  }
+}
+
+/* Цвета */
+.color-burgundy { background-color: #9C0022; }
+.color-brown { background-color: #693900; }
+.color-beige { background-color: #F5D5AD; }
+.color-white { background-color: #FFFFFF; }
+
+/* Адаптив */
+@media (max-width: 700px) {
+  .dresscode {
+    margin: 18px 12px;
+  }
+
+  .dresscode h3 {
+    font-size: clamp(0.875rem, 5vw, 1rem);
+  }
+  .dresscode p {
+    font-size: clamp(0.875rem, 5vw, 1rem);
+  }
+  .dresscode .color-circle {
+    width: clamp(30px, 10vw, 50px);
+    height: clamp(30px, 10vw, 50px);
+  }
+}
+
+@media (max-width: 400px) {
+  .dresscode h3 {
+    font-size: clamp(0.75rem, 5vw, 0.875rem);
+  }
+  .dresscode p {
+    font-size: clamp(0.75rem, 5vw, 0.875rem);
+  }
+  .dresscode .color-circle {
+    width: clamp(25px, 12vw, 40px);
+    height: clamp(25px, 12vw, 40px);
+  }
+}
