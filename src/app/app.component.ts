@@ -4,11 +4,11 @@ import { HeroComponent } from './components/hero/hero.component';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { DressCodeComponent } from './components/dress-code/dress-code.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
-import { WishesComponent } from './components/wishes/wishes.component';
+import { FooterIllustrationComponent } from './components/footer-illustration/footer-illustration.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ HeroComponent,CountdownComponent, DressCodeComponent,ScheduleComponent,WishesComponent],
+  imports: [HeroComponent, CountdownComponent, DressCodeComponent, ScheduleComponent, FooterIllustrationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

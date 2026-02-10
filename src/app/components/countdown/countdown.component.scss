@@ -3,8 +3,8 @@
   margin-left: 10px;
   margin-right: 10px;
   h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1rem, 4vw, 1.5rem); // адаптивный размер
+    font-family: 'Antarctic', serif;
+    font-size: clamp(2rem, 4vw, 5rem); 
     font-weight: 400;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -13,7 +13,7 @@
 
   h3 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1rem, 4vw, 1.5rem); // адаптивный размер
+    font-size: clamp(1rem, 4vw, 1.5rem); 
     font-weight: 700;
     margin-bottom: 20px;
     color: var(--text);
@@ -65,7 +65,10 @@
   }
 
   .countdown {
-    h2, h3 {
+       h2{
+       font-size: clamp(3rem, 4vw, 5rem)
+    }
+    h3 {
       font-size: clamp(0.875rem, 5vw, 1rem);
     }
   }
@@ -82,7 +85,10 @@
   }
 
   .countdown {
-    h2, h3 {
+    h2{
+       font-size: clamp(3rem, 4vw, 5rem)
+    }
+     h3 {
       font-size: clamp(0.75rem, 5vw, 0.875rem);
     }
   }

@@ -30,7 +30,28 @@
   max-width: 420px;
 }
 
-/* Кружки цветов */
+.dresscode .palettes {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  align-items: center;
+}
+
+.dresscode .palette {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.dresscode .palette-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(0.95rem, 3vw, 1.1rem);
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
 .dresscode .colors {
   display: flex;
   gap: 14px;
@@ -58,6 +79,7 @@
 .dresscode .color-circle:nth-child(2) { animation-delay: 0.1s; }
 .dresscode .color-circle:nth-child(3) { animation-delay: 0.15s; }
 .dresscode .color-circle:nth-child(4) { animation-delay: 0.2s; }
+.dresscode .color-circle:nth-child(5) { animation-delay: 0.25s; }
 
 @keyframes cardIn {
   from {
@@ -92,13 +114,17 @@
   }
 }
 
-/* Цвета */
-.color-burgundy { background-color: #9C0022; }
-.color-brown { background-color: #693900; }
-.color-beige { background-color: #F5D5AD; }
-.color-white { background-color: #FFFFFF; }
+.color-men-1 { background-color: #F2F2F2; }
+.color-men-2 { background-color: #F2EBDF; }
+.color-men-3 { background-color: #BFA893; }
+.color-men-4 { background-color: #0D0000; }
+.color-men-5 { background-color: #261C16; }
 
-/* Адаптив */
+.color-women-1 { background-color: #261C16; }
+.color-women-2 { background-color: #592E3A; }
+.color-women-3 { background-color: #BFA893; }
+.color-women-4 { background-color: #F2EBDF; }
+
 @media (max-width: 700px) {
   .dresscode {
     margin: 18px 12px;

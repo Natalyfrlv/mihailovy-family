@@ -5,7 +5,6 @@
   align-items: center;
 }
 
-/* Заголовок */
 h3 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1rem, 4vw, 1.5rem);
@@ -15,7 +14,6 @@ h3 {
   color: var(--text);
 }
 
-/* Расписание */
 .schedule {
   list-style: none;
   padding: 0;
@@ -41,18 +39,20 @@ h3 {
   }
 }
 
-/* Блоки "Церемония / Банкет" */
 .place {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 10px;
+  margin: 10px 0;
   gap: 12px;
+  width: 100%;
+  max-width: 920px;
+  justify-items: start;
 
   h4 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(1rem, 4vw, 1.5rem);
     font-weight: 700;
-    margin-bottom: 10px;
+    margin: 0;
   }
 
   p {
@@ -64,7 +64,6 @@ h3 {
   }
 }
 
-/* Адаптив для планшетов и телефонов */
 @media (max-width: 700px) {
   .card {
     padding: 18px 20px;
